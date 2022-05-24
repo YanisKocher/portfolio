@@ -1,0 +1,31 @@
+//import fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: $lato;
+    font-size: 1rem;
+    color: $base-color;
+}
+
+h1 {
+    z-index: 3;
+    font-family: $poppins;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5rem;
+
+    span:first-child {
+        font-family: $lato;
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 2.5rem;
+    }
+
+    span.text-primary {
+        font-family: $lato;
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 3rem;
+    }
+}

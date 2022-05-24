@@ -1,35 +1,43 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <button class="btn btn-primary">Hey !</button> -->
-  <div class="section_container vh-100">
-    <section id="section1" class="vh-100 bg-primary">section 1</section>
-    <section id="section2" class="vh-100 bg-danger">section 2</section>
-    <section id="section3" class="vh-100 bg-success">section 3</section>
+  <div class="position-relative h-100">
+    <div class="container navbar_container position-fixed start-50">
+      <NavBar />
+    </div>
+    <section id="hey" class="vh-100 position-relative">
+      <div class="filter position-absolute start-0 top-0 vh-100 w-100"></div>
+      <div class="col-6 position-absolute end-0">
+        <img src="./img/kocher_yanis.jpg" alt="" class="vh-100 w-100">
+      </div>
+
+      <div class="container h-100 d-flex align-items-center">
+        <h1 class="text-white text-start">
+          <span class="d-block">Je suis</span>
+          Yanis Kocher
+          <span class="d-block text-primary">Développeur full-stack</span>
+        </h1>
+      </div>
+    </section>
+
+
+
+
+    <section id="parcours" class="vh-100 bg-danger">section 2</section>
+    <section id="technologies" class="vh-100 bg-success">section 3</section>
+    <section id="projets" class="vh-100 bg-primary">section 1</section>
+    <section id="contacts" class="vh-100 bg-danger">section 2</section>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+
+import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
-  // components: {
-  //   HelloWorld
-  // }
-
-  data() {
-    return {
-      //
-    }
+  components: {
+    NavBar
   },
-
-  mounted() {
-    //
-  },
-  methods: {
-    //
-  }
+  
 }
 </script>
 
@@ -43,13 +51,13 @@ export default {
   margin-top: 60px;
 }
 
-.section_container {
+/* .section_container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
 
 section {
   scroll-snap-align: start;
-}
+} */
 
 </style>
