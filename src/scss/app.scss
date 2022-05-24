@@ -1,0 +1,14 @@
+//reset
+@import './utils/reset.css';
+
+// Variables
+@import './utils/_variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//Components
+@import './components/global';
+@import './components/typography';
+@import './components/buttons';
+@import './components/form';
