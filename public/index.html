@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,9 +20,22 @@
     <script src="jquery.pagepiling.js"></script>
     <script>
       $(document).ready(function() {
+        const navLinks = document.querySelectorAll('.nav-link');
         $('#pagepiling').pagepiling({
           menu: "#navbar",
           anchors: ['hey', 'technologies', 'parcours', 'projets', 'contact'],
+
+          onLeave: (index, nextIndex, direction) => {
+            navLinks.forEach(link => {
+              if (index == 2 && direction == 'up') setTimeout(() => {
+                link.classList.add('text-white');
+              }, 50);
+               
+              else if (index == 1 && direction == 'down') setTimeout(() => {
+                link.classList.remove('text-white');
+              }, 650);
+            });
+          }
         });
       });
     </script>
