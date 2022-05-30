@@ -1,11 +1,15 @@
-#hey {
-    .filter {
-        background: linear-gradient(90deg, #202020 0%, #202020 51.29%, rgba(32, 32, 32, 0.5) 100%);
-        z-index: 2;
-    }
+body {
+    background-color: $whiteblue;
 
-    img {
-        z-index: 1;
-        object-fit: cover;
+    #hey {
+        .filter {
+            background: linear-gradient(90deg, #202020 0%, #202020 51.29%, rgba(32, 32, 32, 0.5) 100%);
+            z-index: 2;
+        }
+    
+        img {
+            z-index: 1;
+            object-fit: cover;
+        }
     }
 }

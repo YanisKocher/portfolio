@@ -11278,11 +11278,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-#hey .filter {
+body {
+  background-color: #F5FAFA;
+}
+body #hey .filter {
   background: linear-gradient(90deg, #202020 0%, #202020 51.29%, rgba(32, 32, 32, 0.5) 100%);
   z-index: 2;
 }
-#hey img {
+body #hey img {
   z-index: 1;
   -o-object-fit: cover;
      object-fit: cover;
@@ -11327,11 +11330,7 @@ h1 span.text-primary, .h1 span.text-primary {
   line-height: 2rem;
   font-weight: 600;
 }
-#navbar a.active {
-  background-color: transparent;
-  position: relative;
-}
-#navbar a.active:after {
+#navbar li.active a:after {
   content: "";
   position: absolute;
   background-color: #FFBF00;
