@@ -1,0 +1,13 @@
+.form-floating {
+    & > label {
+        padding: 1rem 1.5rem;
+    }
+
+    & > .form-control {
+        padding: 1rem;
+    }
+
+    & > textarea.form-control {
+        height: calc(9.5rem + 2px);
+    }
+}
