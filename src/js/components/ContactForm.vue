@@ -66,6 +66,8 @@
             <p class="invalid-feedback mb-0">{{errors.message}}</p>
         </div>
 
+        <vue-recaptcha sitekey="6LcA5jEgAAAAAB6zMPA0Y8T0CkKkmMOS3lbhQPcH"></vue-recaptcha>
+
         <div class="col-12">
             <button type="submit" class="btn btn-primary text-white fw-bold">Envoyer</button>
         </div>
@@ -73,7 +75,13 @@
 </template>
 
 <script>
+import { VueRecaptcha } from 'vue-recaptcha';
+
 export default {
+    components: { 
+        VueRecaptcha 
+    },
+
     data() {
         return {
             form: {
