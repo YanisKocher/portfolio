@@ -33,6 +33,20 @@
     <!-- Contact section -->
     <div id="contact" class="section">
       <div class="container">
+        <h2>Coordonnées</h2>
+        <ul class="p-0">
+          <li class="mb-1"><i class="fas fa-at me-2 text-center"></i>Email : <a href="mailto:contact@yaniskocher.fr">contact@yaniskocher.fr</a></li>
+          <li class="mb-1"><i class="fas fa-phone-alt me-2 text-center"></i>Téléphone : <a href="tel:0781999003">07.81.99.90.03</a></li>
+          <li class="mb-1">
+            <i class="fas fa-map-marker-alt me-2 text-center"></i>
+            <p class="d-inline-block m-0">34, rue du Général de Gaulle</p>
+            <p class="m-0 ps-4">67640 Lipsheim</p>  
+          </li>
+          <li class="mb-1"><i class="fab fa-github me-2 text-center"></i>GitHub : <a href="https://github.com/YanisKocher">YanisKocher</a></li>
+          <li><i class="fab fa-linkedin-in me-2 text-center"></i>Linkedin : <a href="https://www.linkedin.com/in/yanis-kocher-683492184/">Yanis Kocher</a></li>
+        </ul>
+
+        <h2 class="mt-4">Envoyer un message</h2>
         <ContactForm />
       </div>
     </div>

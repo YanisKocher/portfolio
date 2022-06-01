@@ -29,4 +29,16 @@ body {
             object-fit: cover;
         }
     }
+
+    #contact {
+        li {
+            i {
+                width: 1rem;
+            }
+
+            p {
+                line-height: 1rem;
+            }
+        }
+    }
 }

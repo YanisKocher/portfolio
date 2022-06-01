@@ -11300,6 +11300,12 @@ body #hey img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+body #contact li i {
+  width: 1rem;
+}
+body #contact li p {
+  line-height: 1rem;
+}
 
 body {
   font-family: "Lato", sans-serif;
@@ -11325,6 +11331,14 @@ h1 span.text-primary, .h1 span.text-primary {
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 3rem;
+}
+
+h2, .h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 500;
+  letter-spacing: -2px;
 }
 
 .form-floating > label {
