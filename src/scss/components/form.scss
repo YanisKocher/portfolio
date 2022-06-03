@@ -1,13 +1,29 @@
 .form-floating {
     & > label {
-        padding: 1rem 1.5rem;
+        padding: 0.5rem 1.5rem;
+        
+        @include media-breakpoint-up(md) {
+            padding: 1rem 1.5rem;
+        }
     }
 
     & > .form-control {
-        padding: 1rem;
+        padding: 0.5rem 1rem;
+
+        @include media-breakpoint-down(md) {
+            height: calc(2.5rem + 2px);
+        }
+
+        @include media-breakpoint-up(md) {
+            padding: 1rem;
+        }
     }
 
     & > textarea.form-control {
-        height: calc(9.5rem + 2px);
+        height: calc(7.5rem + 2px);
+
+        @include media-breakpoint-up(md) {
+            height: calc(9.5rem + 2px);
+        }
     }
 }

@@ -11298,10 +11298,14 @@ body #hey img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-body #contact li i {
+body #contact .container {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+body #contact .container li i {
   width: 1rem;
 }
-body #contact li p {
+body #contact .container li p {
   line-height: 1rem;
 }
 
@@ -11372,13 +11376,33 @@ h2, .h2 {
 }
 
 .form-floating > label {
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .form-floating > label {
+    padding: 1rem 1.5rem;
+  }
 }
 .form-floating > .form-control {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
+}
+@media (max-width: 767.98px) {
+  .form-floating > .form-control {
+    height: calc(2.5rem + 2px);
+  }
+}
+@media (min-width: 768px) {
+  .form-floating > .form-control {
+    padding: 1rem;
+  }
 }
 .form-floating > textarea.form-control {
-  height: calc(9.5rem + 2px);
+  height: calc(7.5rem + 2px);
+}
+@media (min-width: 768px) {
+  .form-floating > textarea.form-control {
+    height: calc(9.5rem + 2px);
+  }
 }
 
 .navbar_container {

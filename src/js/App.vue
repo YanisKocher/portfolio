@@ -32,23 +32,23 @@
     
     <!-- Contact section -->
     <section id="contact" class="section">
-      <div class="container d-flex flex-wrap">
+      <div class="container h-100 d-flex flex-wrap">
         <div class="col-12 col-md-4">
           <h2>Coordonnées</h2>
           <ul class="p-0">
-            <li class="mb-1"><i class="fas fa-at me-2 text-center"></i>Email : <a href="mailto:contact@yaniskocher.fr">contact@yaniskocher.fr</a></li>
-            <li class="mb-1"><i class="fas fa-phone-alt me-2 text-center"></i>Téléphone : <a href="tel:0781999003">07.81.99.90.03</a></li>
+            <li class="mb-1"><font-awesome-icon :icon="['fa-solid', 'at']" class="me-2 text-center" />Email : <a href="mailto:contact@yaniskocher.fr">contact@yaniskocher.fr</a></li>
+            <li class="mb-1"><font-awesome-icon :icon="['fa-solid', 'phone']" class="me-2 text-center" />Téléphone : <a href="tel:0781999003">07.81.99.90.03</a></li>
             <li class="mb-1">
-              <i class="fas fa-map-marker-alt me-2 text-center"></i>
+              <font-awesome-icon :icon="['fa-solid', 'map-marker-alt']" class="me-2 text-center" />
               <p class="d-inline-block m-0">34, rue du Général de Gaulle</p>
               <p class="m-0 ps-4">67640 Lipsheim</p>  
             </li>
-            <li class="mb-1"><i class="fab fa-github me-2 text-center"></i>GitHub : <a href="https://github.com/YanisKocher">YanisKocher</a></li>
-            <li><i class="fab fa-linkedin-in me-2 text-center"></i>Linkedin : <a href="https://www.linkedin.com/in/yanis-kocher-683492184/">Yanis Kocher</a></li>
+            <li class="mb-1"><font-awesome-icon :icon="['fa-brands', 'github']" class="me-2 text-center" />GitHub : <a href="https://github.com/YanisKocher">YanisKocher</a></li>
+            <li><font-awesome-icon :icon="['fa-brands', 'linkedin']" class="me-2 text-center" />Linkedin : <a href="https://www.linkedin.com/in/yanis-kocher-683492184/">Yanis Kocher</a></li>
           </ul>
         </div>
         <div class="col-12 col-md-8">
-          <h2>Envoyer un message</h2>
+          <h2 class="d-none d-md-block">Envoyer un message</h2>
           <ContactForm />
         </div>
       </div>

@@ -22,14 +22,20 @@ body {
     }
 
     #contact {
-        li {
-            i {
-                width: 1rem;
-            }
+        .container {
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
 
-            p {
-                line-height: 1rem;
+            li {
+                i {
+                    width: 1rem;
+                }
+    
+                p {
+                    line-height: 1rem;
+                }
             }
         }
+
     }
 }

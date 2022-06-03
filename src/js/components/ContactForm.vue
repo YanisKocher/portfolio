@@ -1,6 +1,6 @@
 <template>
-    <form action="" class="row g-3" @submit.prevent="submit">
-        <div class="form-floating col-12 col-md-6">
+    <form action="" class="row g-2 g-md-3" @submit.prevent="submit">
+        <div class="form-floating col-6">
             <input 
                 type="text" 
                 id="lastname"
@@ -12,7 +12,7 @@
             <label for="lastname">Nom</label>
             <p class="invalid-feedback mb-0">{{errors.lastname}}</p>
         </div>
-        <div class="form-floating col-12 col-md-6">
+        <div class="form-floating col-6">
             <input 
                 type="text" 
                 id="firstname" 
