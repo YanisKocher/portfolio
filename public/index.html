@@ -7,7 +7,6 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="jquery.pagepiling.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body class="position-relative">
@@ -27,15 +26,19 @@
           anchors: ['hey', 'technologies', 'parcours', 'projets', 'contact'],
 
           onLeave: (index, nextIndex, direction) => {
-            navLinks.forEach(link => {
-              if (index == 2 && direction == 'up') setTimeout(() => {
-                link.classList.add('text-white');
-              }, 50);
-               
-              else if (index == 1 && direction == 'down') setTimeout(() => {
-                link.classList.remove('text-white');
-              }, 650);
-            });
+            if(window.innerWidth >= 768) {
+              navLinks.forEach(link => {
+                if (nextIndex == 1 && direction == 'up') setTimeout(() => {
+                  link.classList.add('text-white');
+                  link.classList.remove('text-black');
+                }, 50);
+                 
+                else if (index == 1 && direction == 'down') setTimeout(() => {
+                  link.classList.add('text-black');
+                  link.classList.remove('text-white');
+                }, 650);
+              });
+            }
           }
         });
       });

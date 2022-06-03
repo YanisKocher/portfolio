@@ -1,7 +1,24 @@
 .navbar_container {
-    top: 2.5rem;
-    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: 0px -4px 15px 2px rgba(124, 124, 124, 0.8);
+    bottom: 0;
+    left: 0;
     z-index: 10;
+    
+    @include media-breakpoint-down(md) {
+        width: 100vw;
+        max-width: initial;
+        padding: 0;
+    }
+
+    @include media-breakpoint-up(md) {
+        background-color: transparent;
+        box-shadow: none;
+        bottom: unset;
+        top: 2.5rem;
+        left: 50vw;
+        transform: translateX(-50%);
+    }
 }
 
 #navbar {
@@ -13,13 +30,31 @@
         font-weight: 600;
     }
 
-    li.active a:after {
-        content: "";
-        position: absolute;
-        background-color: $primary;
-        width: 100%;
-        height: 0.25rem;
-        left: 0;
-        bottom: -0.5rem;
+    li {
+        width: 20%;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            width: auto;
+            text-align: left;
+        }
+
+        &.active {
+            a {
+                color: $primary;
+
+                @include media-breakpoint-up(md) {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        background-color: $primary;
+                        width: 100%;
+                        height: 0.25rem;
+                        left: 0;
+                        bottom: -0.5rem;
+                    }
+                }
+            }
+        }
     }
 }

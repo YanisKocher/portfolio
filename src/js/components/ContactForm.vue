@@ -33,7 +33,7 @@
                 :class="isValid('email')" 
                 placeholder="contact@yaniskocher.fr" 
                 v-model="form.email"
-                @input="verificationEmail"
+                @input="verifyEmail"
             >
             <label for="email">Adresse email</label>
             <p class="invalid-feedback mb-0">{{errors.email}}</p>
@@ -47,7 +47,7 @@
                 :class="isValid('subject')" 
                 placeholder="Sujet" 
                 v-model="form.subject"
-                @input="verificationSubject"
+                @input="verifySubject"
             >
             <label for="subject">Sujet</label>
             <p class="invalid-feedback mb-0">{{errors.subject}}</p>
@@ -60,13 +60,20 @@
                 :class="isValid('message')" 
                 placeholder="Ecrivez votre message..." 
                 v-model="form.message"
-                @input="verificationMessage"
+                @input="verifyMessage"
             ></textarea>
             <label for="message">Ecrivez votre message...</label>
             <p class="invalid-feedback mb-0">{{errors.message}}</p>
         </div>
 
-        <vue-recaptcha sitekey="6LcA5jEgAAAAAB6zMPA0Y8T0CkKkmMOS3lbhQPcH"></vue-recaptcha>
+        <vue-recaptcha 
+            ref="recaptcha" 
+            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+            @verify="verifyRecaptcha"
+            @expired="verifyRecaptcha"
+            :class="isValid('recaptcha')" 
+        ></vue-recaptcha>
+        <p class="invalid-feedback mb-0">{{errors.recaptcha}}</p>
 
         <div class="col-12">
             <button type="submit" class="btn btn-primary text-white fw-bold">Envoyer</button>
@@ -89,14 +96,16 @@ export default {
                 firstname: '',
                 email: '',
                 subject: '',
-                message: ''
+                message: '',
+                recaptcha: ''
             },
             errors: {
                 lastname: '',
                 firstname: '',
                 email: '',
                 subject: '',
-                message: ''
+                message: '',
+                recaptcha: ''
             } 
         }
     },
@@ -104,10 +113,23 @@ export default {
     methods: {
         submit() {
             for (const key in this.form) {
-                if(this.form[key] === '') {
+                if(this.form[key] === '' && key !== 'recaptcha') {
                     this.errors[key] = 'Ce champ est obligatoire';
                 }
+
+                else if (this.form[key] === '' && key == 'recaptcha') {
+                    this.errors[key] = 'Veuillez valider le captcha';
+                }
             }
+
+            for (const key in this.errors) {
+                if(this.errors[key] !== '') {
+                    return false;
+                }
+            }
+
+            return alert('envoyé !');
+
         },
 
         isValid(label) {
@@ -115,26 +137,38 @@ export default {
             else if(this.errors[label] !== '') return 'is-invalid';
         },
 
-        verificationEmail() {
+        verifyEmail() {
             if(this.form.email !== '' && !this.form.email.match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
                 this.errors.email = 'Votre adresse email n\'est pas valide';
             } 
             else this.errors.email = '';
         },
 
-        verificationSubject() {
+        verifySubject() {
             if(this.form.subject !== '' && this.form.subject.length < 3) {
                 this.errors.subject = 'Votre sujet doit contenir au moins 3 caractères';
             }
             else this.errors.subject = '';
         },
 
-        verificationMessage() {
+        verifyMessage() {
             if(this.form.message !== '' && this.form.message.length < 10) {
                 this.errors.message = 'Votre message doit contenir au moins 10 caractères';
             }
             else this.errors.message = '';
-        }
+        },
+
+        verifyRecaptcha(value) {
+            if(value) {
+                this.form.recaptcha = value;
+                this.errors.recaptcha = '';
+            }
+
+            else {
+                this.form.recaptcha = "";
+                this.errors.recaptcha = 'Veuillez valider le captcha';
+            }
+        },
     }
 }
 </script>
