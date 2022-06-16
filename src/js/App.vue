@@ -32,7 +32,7 @@
     
     <!-- Contact section -->
     <section id="contact" class="section">
-      <div class="container h-100 d-flex flex-wrap">
+      <div class="container d-md-flex flex-wrap">
         <div class="col-12 col-md-4">
           <h2>Coordonnées</h2>
           <ul class="p-0">
@@ -48,7 +48,7 @@
           </ul>
         </div>
         <div class="col-12 col-md-8">
-          <h2 class="d-none d-md-block">Envoyer un message</h2>
+          <h2>Envoyer un message</h2>
           <ContactForm />
         </div>
       </div>

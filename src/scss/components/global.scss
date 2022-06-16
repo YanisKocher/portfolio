@@ -3,7 +3,20 @@ body {
 
     @include media-breakpoint-down(md) {
         section {
-            padding-bottom: 3rem;
+            max-height: 100vh;
+            display: block !important;
+            padding-bottom: 3rem !important; 
+
+            .container {
+                height: 100%;
+                padding-top: 1.5rem;
+            }
+        }
+
+        .pp-tableCell {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 
@@ -23,9 +36,6 @@ body {
 
     #contact {
         .container {
-            overflow-y: scroll;
-            -webkit-overflow-scrolling: touch;
-
             li {
                 i {
                     width: 1rem;
@@ -37,5 +47,8 @@ body {
             }
         }
 
+        .modal {
+            background: rgba(0, 0, 0, 0.5); 
+        }
     }
 }

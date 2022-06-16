@@ -8,6 +8,7 @@
                 :class="isValid('lastname')" 
                 placeholder="Nom" 
                 v-model="form.lastname"
+                @input="verifyIsNotEmpty('lastname')"
             >
             <label for="lastname">Nom</label>
             <p class="invalid-feedback mb-0">{{errors.lastname}}</p>
@@ -20,6 +21,7 @@
                 :class="isValid('firstname')" 
                 placeholder="Prénom" 
                 v-model="form.firstname"
+                @input="verifyIsNotEmpty('firstname')"
             >
             <label for="firstname">Prénom</label>
             <p class="invalid-feedback mb-0">{{errors.firstname}}</p>
@@ -78,11 +80,20 @@
         <div class="col-12">
             <button type="submit" class="btn btn-primary text-white fw-bold">Envoyer</button>
         </div>
+
+        <div
+            v-if="validation.type && validation.message"
+            class="mt-3"
+            :class="validationMessage()"
+        >
+            {{validation.message}}
+        </div>
     </form>
 </template>
 
 <script>
 import { VueRecaptcha } from 'vue-recaptcha';
+import axios from 'axios';
 
 export default {
     components: { 
@@ -106,9 +117,26 @@ export default {
                 subject: '',
                 message: '',
                 recaptcha: ''
-            } 
+            },
+            validation: {
+                type: '',
+                message: ''
+            },
+            step: 1,
+            // fullForm: true
         }
     },
+
+    // mounted() {
+    //     let container = document.querySelector('#contact .container');
+    //     if(container.offsetHeight < 721) this.fullForm = false;
+
+    //     window.addEventListener('resize', () => {
+    //         console.log('change', container.offsetHeight);
+    //         if(container.offsetHeight < 721) this.fullForm = false;
+    //         else this.fullForm = true;
+    //     });
+    // },
 
     methods: {
         submit() {
@@ -128,13 +156,16 @@ export default {
                 }
             }
 
-            return alert('envoyé !');
-
+            this.sendEmail();
         },
 
         isValid(label) {
             if(this.form[label] !== '' && this.errors[label] === '') return 'is-valid';
             else if(this.errors[label] !== '') return 'is-invalid';
+        },
+
+        verifyIsNotEmpty(label) {
+            if(this.form[label] !== '') this.errors[label] = '';
         },
 
         verifyEmail() {
@@ -169,6 +200,26 @@ export default {
                 this.errors.recaptcha = 'Veuillez valider le captcha';
             }
         },
+
+        sendEmail() {
+            axios.post('https://yaniskocher.fr/sendEmail.php', {form: this.form})
+                .then(resp => {
+                    this.validation.type = resp.data.type;
+                    this.validation.message = resp.data.message;
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        },
+
+        validationMessage() {
+            if(this.validation.type === 'success') {
+                return 'alert alert-success';
+            }
+            else if(this.validation.type === 'error') {
+                return 'alert alert-danger';
+            }
+        }
     }
 }
 </script>
