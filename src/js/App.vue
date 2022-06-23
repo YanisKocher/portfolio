@@ -32,8 +32,9 @@
     
     <!-- Contact section -->
     <section id="contact" class="section">
-      <div class="container d-md-flex flex-wrap">
-        <div class="col-12 col-md-4">
+      <div class="container d-md-flex align-items-center vh-100">
+        <div class="d-flex flex-column flex-md-row">
+          <div id="contact_informations" class="col-12 col-md-6 col-xl-4">
           <h2>Coordonnées</h2>
           <ul class="p-0">
             <li class="mb-1"><font-awesome-icon :icon="['fa-solid', 'at']" class="me-2 text-center" />Email : <a href="mailto:contact@yaniskocher.fr">contact@yaniskocher.fr</a></li>
@@ -47,9 +48,10 @@
             <li><font-awesome-icon :icon="['fa-brands', 'linkedin']" class="me-2 text-center" />Linkedin : <a href="https://www.linkedin.com/in/yanis-kocher-683492184/">Yanis Kocher</a></li>
           </ul>
         </div>
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-6 col-xl-8">
           <h2>Envoyer un message</h2>
           <ContactForm />
+        </div>
         </div>
       </div>
     </section>

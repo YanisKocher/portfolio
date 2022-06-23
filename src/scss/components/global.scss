@@ -36,6 +36,14 @@ body {
 
     #contact {
         .container {
+            & > div {
+                max-height: calc(100vh - 10.5rem);
+            }
+
+            @include media-breakpoint-up(md) {
+                padding: 6rem 0 2.5rem;
+            }
+
             li {
                 i {
                     width: 1rem;

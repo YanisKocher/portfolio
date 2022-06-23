@@ -11309,6 +11309,14 @@ body #hey img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+body #contact .container > div {
+  max-height: calc(100vh - 10.5rem);
+}
+@media (min-width: 768px) {
+  body #contact .container {
+    padding: 8rem 0 2.5rem;
+  }
+}
 body #contact .container li i {
   width: 1rem;
 }
