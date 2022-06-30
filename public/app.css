@@ -11281,15 +11281,14 @@ textarea.form-control-lg {
 body {
   background-color: #F5FAFA;
 }
+body section {
+  background-color: #F5FAFA;
+}
 @media (max-width: 767.98px) {
   body section {
     max-height: 100vh;
     display: block !important;
-    padding-bottom: 3rem !important;
-  }
-  body section .container {
-    height: 100%;
-    padding-top: 1.5rem;
+    padding-bottom: 3.75rem !important;
   }
   body .pp-tableCell {
     display: flex !important;
@@ -11309,12 +11308,246 @@ body #hey img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+body #technologies div.col-4 {
+  height: 88px;
+}
+body #technologies div#html5 {
+  transition: 250ms;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4rem;
+}
+body #technologies div#html5:hover {
+  color: #DC4A25;
+}
+body #technologies div#html5:hover + p {
+  font-weight: bold;
+}
+body #technologies div#html5:hover .position-absolute {
+  font-size: 7rem;
+  opacity: 0.2;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+body #technologies div#sass {
+  transition: 250ms;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4rem;
+}
+body #technologies div#sass:hover {
+  color: #C76395;
+}
+body #technologies div#sass:hover + p {
+  font-weight: bold;
+}
+body #technologies div#sass:hover .position-absolute {
+  font-size: 7rem;
+  opacity: 0.2;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+body #technologies div#vuejs {
+  transition: 250ms;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4rem;
+}
+body #technologies div#vuejs:hover {
+  color: #3EB27F;
+}
+body #technologies div#vuejs:hover + p {
+  font-weight: bold;
+}
+body #technologies div#vuejs:hover .position-absolute {
+  font-size: 7rem;
+  opacity: 0.2;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+body #technologies div#laravel {
+  transition: 250ms;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4rem;
+}
+body #technologies div#laravel:hover {
+  color: #E8392C;
+}
+body #technologies div#laravel:hover + p {
+  font-weight: bold;
+}
+body #technologies div#laravel:hover .position-absolute {
+  font-size: 7rem;
+  opacity: 0.2;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+body #technologies div#css3 {
+  transition: 250ms;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4rem;
+}
+body #technologies div#css3:hover {
+  color: #28A4D8;
+}
+body #technologies div#css3:hover + p {
+  font-weight: bold;
+}
+body #technologies div#css3:hover .position-absolute {
+  font-size: 7rem;
+  opacity: 0.2;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+body #technologies div#js {
+  transition: 250ms;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4rem;
+}
+body #technologies div#js:hover {
+  color: #E8D44D;
+}
+body #technologies div#js:hover + p {
+  font-weight: bold;
+}
+body #technologies div#js:hover .position-absolute {
+  font-size: 7rem;
+  opacity: 0.2;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+body #technologies div#php {
+  transition: 250ms;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4rem;
+}
+body #technologies div#php:hover {
+  color: #7277AD;
+}
+body #technologies div#php:hover + p {
+  font-weight: bold;
+}
+body #technologies div#php:hover .position-absolute {
+  font-size: 7rem;
+  opacity: 0.2;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+body #technologies div#figma {
+  transition: 250ms;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4rem;
+}
+body #technologies div#figma:hover {
+  color: #202020;
+}
+body #technologies div#figma:hover + p {
+  font-weight: bold;
+}
+body #technologies div#figma:hover .position-absolute {
+  font-size: 7rem;
+  opacity: 0.2;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+body #technologies div#bootstrap {
+  transition: 250ms;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4rem;
+}
+body #technologies div#bootstrap:hover {
+  color: #7951B3;
+}
+body #technologies div#bootstrap:hover + p {
+  font-weight: bold;
+}
+body #technologies div#bootstrap:hover .position-absolute {
+  font-size: 7rem;
+  opacity: 0.2;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+body #technologies div#wordpress {
+  transition: 250ms;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4rem;
+}
+body #technologies div#wordpress:hover {
+  color: #217196;
+}
+body #technologies div#wordpress:hover + p {
+  font-weight: bold;
+}
+body #technologies div#wordpress:hover .position-absolute {
+  font-size: 7rem;
+  opacity: 0.2;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+body #technologies div#linux {
+  transition: 250ms;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4rem;
+}
+body #technologies div#linux:hover {
+  color: #EDB62D;
+}
+body #technologies div#linux:hover + p {
+  font-weight: bold;
+}
+body #technologies div#linux:hover .position-absolute {
+  font-size: 7rem;
+  opacity: 0.2;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+body #technologies svg {
+  font-size: 4rem;
+}
+body #parcours .input_container {
+  width: 3rem;
+}
+body #parcours .input_container input[type=range] {
+  transform: rotate(90deg);
+  transform-origin: bottom left;
+  width: 9rem;
+}
 body #contact .container > div {
   max-height: calc(100vh - 10.5rem);
 }
 @media (min-width: 768px) {
   body #contact .container {
-    padding: 8rem 0 2.5rem;
+    padding: 6rem 0 2.5rem;
   }
 }
 body #contact .container li i {
@@ -11327,6 +11560,11 @@ body #contact .modal {
   background: rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 767.98px) {
+  #pp-nav {
+    display: none;
+  }
+}
 #pp-nav.right {
   right: 1rem !important;
 }
@@ -11450,10 +11688,15 @@ h2, .h2 {
 
 #navbar a {
   font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #202020;
   line-height: 2rem;
   font-weight: 600;
+}
+#navbar p {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
 }
 #navbar li {
   width: 20%;

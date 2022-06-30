@@ -4,6 +4,7 @@
             <li v-for="(tab, i) in tabs" :key="i" class="nav-item" :class="i == 0 ? 'active' : ''" :data-menuanchor="tab.label.toLowerCase().replace(/[^A-Z0-9]/ig, '')">
                 <a v-if="$windowWidth < 768" class="nav-link p-0" :href="'#' + tab.label.toLowerCase().replace(/[^A-Z0-9]/ig, '')">
                     <font-awesome-icon :icon="['fa-solid', tab.icone]" />
+                    <p class="m-0" v-text="tab.label == 'Technologies' ? 'Techno\'s' : tab.label"></p>
                 </a>
                 <a v-else class="nav-link p-0 text-white position-relative" :href="'#' + tab.label.toLowerCase().replace(/[^A-Z0-9]/ig, '')">{{tab.label}}</a>
             </li>

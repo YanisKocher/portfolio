@@ -139,16 +139,11 @@ export default {
 
         this.checkFullForm(_this, container, CIBlock)
         
-        window.addEventListener('resize', () => {
-            console.log('resize');
-            this.checkFullForm(_this, container, CIBlock)
-        });
+        window.addEventListener('resize', this.checkFullForm(_this, container, CIBlock));
     },
 
     methods: {
         checkFullForm(_this, container, CIBlock) {
-            console.log(_this.$windowWidth);
-
             if(_this.$windowWidth < 768) {
                 if((container.offsetHeight - CIBlock.offsetHeight) < 756) _this.fullForm = false;
                 else _this.fullForm = true;
@@ -162,19 +157,15 @@ export default {
 
         submit() {
             for (const key in this.form) {
-                if(this.form[key] === '' && key !== 'recaptcha') {
-                    this.errors[key] = 'Champ obligatoire';
-                }
-
-                else if (this.form[key] === '' && key == 'recaptcha') {
-                    this.errors[key] = 'Veuillez valider le captcha';
-                }
+                if(this.form[key] === '' && key !== 'recaptcha') 
+                this.errors[key] = 'Champ obligatoire';
+                
+                else if (this.form[key] === '' && key == 'recaptcha') 
+                this.errors[key] = 'Veuillez valider le captcha';
             }
 
             for (const key in this.errors) {
-                if(this.errors[key] !== '') {
-                    return false;
-                }
+                if(this.errors[key] !== '') return false;
             }
 
             this.sendEmail();

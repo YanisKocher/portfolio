@@ -1,16 +1,15 @@
 body {
     background-color: $whiteblue;
 
+    section {
+        background-color: $whiteblue;
+    }
+
     @include media-breakpoint-down(md) {
         section {
             max-height: 100vh;
             display: block !important;
-            padding-bottom: 3rem !important; 
-
-            .container {
-                height: 100%;
-                padding-top: 1.5rem;
-            }
+            padding-bottom: 3.75rem !important; 
         }
 
         .pp-tableCell {
@@ -32,6 +31,55 @@ body {
             z-index: 1;
             object-fit: cover;
         }
+    }
+
+    #technologies {
+        div {
+            &.col-4 {
+                height: 88px;
+            }
+
+            @each $logoColor, $i in $logoColors {
+                &##{$logoColor} {
+                    transition: 250ms;
+                    width: fit-content;
+                    height: 4rem;
+
+                    &:hover {
+                        color: $i;
+
+                        & + p {
+                            font-weight: bold;
+                        }
+
+                        .position-absolute {
+                            font-size: 7rem;
+                            opacity: 0.2;
+                            top: 50% !important;
+                            left: 50% !important;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+        }
+
+        svg {
+            font-size: 4rem;
+        }
+    }
+
+    #parcours {
+        .input_container {
+            width: 3rem;
+
+            input[type="range"] {
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+                width: 9rem;
+            }
+        }
+
     }
 
     #contact {
