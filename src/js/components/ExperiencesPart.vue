@@ -4,8 +4,8 @@
             <input type="range" class="form-range start-50" min="0" max="2" step="1" v-model="year_index">
         </div>
         <div class="flex-grow-1">
-            <h3>{{data[year_index].title}}</h3>
-            <p>{{data[year_index].year}}</p>
+            <h3 class="m-0">{{data[year_index].title}}</h3>
+            <p class="date">{{data[year_index].year}}</p>
             <p v-html="data[year_index].description"></p>
         </div>
     </div>

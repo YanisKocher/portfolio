@@ -23,7 +23,13 @@
         const navLinks = document.querySelectorAll('.nav-link');
         $('#pagepiling').pagepiling({
           menu: "#navbar",
-          anchors: ['hey', 'technologies', 'parcours', 'projets', 'contact'],
+          anchors: [
+            'hey', 
+            'technologies', 
+            'parcours', 
+            // 'projets', 
+            'contact'
+          ],
 
           onLeave: (index, nextIndex, direction) => {
             if(window.innerWidth >= 768) {

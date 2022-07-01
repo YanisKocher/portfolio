@@ -11542,6 +11542,10 @@ body #parcours .input_container input[type=range] {
   transform-origin: bottom left;
   width: 9rem;
 }
+body #parcours p.date {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
 body #contact .container > div {
   max-height: calc(100vh - 10.5rem);
 }
@@ -11629,6 +11633,14 @@ h2, .h2 {
     font-size: 3rem;
     line-height: 4rem;
   }
+}
+
+h3, .h3 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  font-family: "Poppins", sans-serif;
 }
 
 .form-floating > label {

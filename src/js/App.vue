@@ -4,7 +4,7 @@
   </div>
   <div id="pagepiling" class="vh-100">
     <!-- First section -->
-    <section id="hey" class="section" style="background-color: blue;">
+    <section id="hey" class="section">
       <div class="position-relative h-100">
         <div class="filter position-absolute start-0 top-0 vh-100 w-100"></div>
         <div class="col-6 position-absolute end-0">
@@ -24,7 +24,7 @@
     <!-- Technology section -->
     <section id="technologies" class="section">
       <div class="container">
-        <h2 class="mb-5">Mes technologies</h2>
+        <h2 class="mb-3 mb-md-5">Mes technologies</h2>
         <div class="d-flex flex-wrap">
           <div v-for="(technologie, i) in technologies" :key="i" class="col-4 mb-4">
             <div :id="technologie.icon" class="d-block mx-auto position-relative">
@@ -40,20 +40,20 @@
     <!-- Route section -->
     <section id="parcours" class="section">
       <div class="container">
-        <h2 class="mb-5">Mon parcours</h2>
+        <h2 class="mb-3 mb-md-5">Mon parcours</h2>
         <ExperiencesPart />
       </div>
     </section>
     
     <!-- Projects section -->
-    <section id="projets" class="section">Some section</section>
+    <!-- <section id="projets" class="section">Some section</section> -->
     
     <!-- Contact section -->
     <section id="contact" class="section">
       <div class="container d-md-flex align-items-center vh-100">
         <div class="d-flex flex-column flex-md-row">
           <div id="contact_informations" class="col-12 col-md-6 col-xl-4">
-          <h2>Coordonnées</h2>
+          <h2 class="mt-5 mt-md-0">Coordonnées</h2>
           <ul class="p-0">
             <li class="mb-1"><font-awesome-icon :icon="['fa-solid', 'at']" class="me-2 text-center" />Email : <a href="mailto:contact@yaniskocher.fr">contact@yaniskocher.fr</a></li>
             <li class="mb-1"><font-awesome-icon :icon="['fa-solid', 'phone']" class="me-2 text-center" />Téléphone : <a href="tel:0781999003">07.81.99.90.03</a></li>
